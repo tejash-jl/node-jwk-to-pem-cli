@@ -3,6 +3,33 @@
 [![Build Status](https://travis-ci.org/Brightspace/node-jwk-to-pem.svg?branch=master)](https://travis-ci.org/Brightspace/node-jwk-to-pem) [![Coverage Status](https://coveralls.io/repos/Brightspace/node-jwk-to-pem/badge.svg)](https://coveralls.io/r/Brightspace/node-jwk-to-pem)
 
 Convert a [json web key][jwk] to a PEM for use by OpenSSL or `crypto`.
+## Install CLI
+```sh
+npm install jwk-to-pem-cli -g
+```
+## CLI Usage
+```sh
+Usage: jwk-to-pem [options]
+
+CLI to convert jwk to pem
+
+Options:
+  -V, --version  output the version number
+  --jwk <type>   The JSON Web Key in string format that you want to convert to PEM.
+  -p, --public   Outputs the PEM as a public key. If this flag is provided, the command will convert the JWK to a PEM format for a public key. (default: false)
+  -h, --help     display help for command
+
+jwk-to-pem --jwk '{"kty":"RSA","n":"jp....tOg0l7H0OhpG7Ey2RuO8"}'
+
+Output:
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCOmKau+pJqxgip
+******
+6nsdbpCh30e1qUmDK6lvKcv8TYQo2Z3+kNiLg+8jx7bKxIMA5ETdLGoc/RQ0CGqC
+++06DSXsfQ6GkbsTLZG47w==
+-----END PRIVATE KEY-----
+
+```
 
 ## Install
 ```sh

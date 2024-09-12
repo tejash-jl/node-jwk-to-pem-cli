@@ -6,3 +6,4 @@ package-lock.json
 *.swp
 
 .nyc_output
+.idea
